@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get '/about' => 'welcome#about'
   get '/contact' => 'welcome#contact'
   get '/careers' => 'welcome#careers'
-  get '/services' => 'welcome#services'
 
   resources :projects
   resources :posts

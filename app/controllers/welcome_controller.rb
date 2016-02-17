@@ -8,10 +8,6 @@ class WelcomeController < ApplicationController
     @title = "About"
   end
 
-  def services
-    @title = "Services"
-  end
-
   def contact
     @title = "Contact"
   end
