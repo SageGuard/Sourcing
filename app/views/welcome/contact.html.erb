@@ -1,0 +1,103 @@
+<div class="full_page_photo"><div id="map"></div></div>
+<div class="main">
+      <section class="hgroup">
+          <div class="container">
+               <h1>Contact us</h1>
+               <ul class="breadcrumb pull-right">
+                    <li><%= link_to "Home", root_path %></li>
+                    <li class="active">Contact</li>
+               </ul>
+           </div>
+      </section>
+      <section>
+          <div class="container">
+               <div class="row">
+                    <div class="office_address col-sm-4 col-md-4">
+                         <div class="team_member">
+                         	<%= image_tag "sourcing-logo.png", alt: "logo", height: 90, width: 90 %>
+                         	<h5>SageGuard Sourcing</h5>
+                              <small>Optimize your Resources</small>
+                              <br><br><br><br>
+                              <address>
+                              <strong></strong><br>
+                              29638 Detroit Rd.<br>
+                              Westlake, OH 44145<br>
+                              <abbr title="Phone">P:</abbr> (440) 892-2000
+                              </address>
+                              <address>
+                              <abbr title="Email">E:</abbr> <a href="mailto:#">contact@sageguard.com</a>
+                              </address>
+                         </div>
+                    </div>
+                    <div class="contact_form col-sm-8 col-md-8">
+                         <form name="contact_form" id="contact_form" method="post">
+                              <div class="row">
+                                   <div class="col-sm-6 col-md-6">
+                                        <label>Name</label>
+                                        <input name="name" id="name" class="form-control" type="text" value="">
+                                   </div>
+                                   <div class="col-sm-6 col-md-6">
+                                        <label>E-mail</label>
+                                        <input name="email" id="email" class="form-control" type="text" value="">
+                                   </div>
+                              </div>
+                              <div class="row">
+                                   <div class="col-sm-12 col-md-12">
+                                        <label>Subject</label>
+                                        <input name="subject" id="subject" class="form-control" type="text">
+                                   </div>
+                              </div>
+                              <div class="row">
+                                   <div class="col-sm-12 col-md-12">
+                                        <label>Message</label>
+                                        <textarea name="message" id="message" rows="8" class="form-control"></textarea>
+                                   </div>
+                                   <div class="col-sm-12 col-md-12"><br/>
+                                        <a id="submit_btn" class="btn btn-primary" name="submit">Submit Message</a> <span id="notice" class="alert alert-warning alert-dismissable hidden" style="margin-left:20px;"></span> </div>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+           </div>
+      </section>
+
+<%= content_for "google_map" do %>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXxYFKJOL_jKdfL4ARf50CjdHYtCC-xvw&sensor=false"></script>
+<script type="text/javascript"> // Google Map
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+
+            function init() {
+
+	      var myLatlng = new google.maps.LatLng(41.46451, -81.94851); // SageGuard HQ
+
+
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 13,
+		// Disable scrollwheel zooming on the map
+		scrollwheel: false,
+                    center: myLatlng,
+
+                    // How you would like to style the map.
+                    // This is where you would paste any style. For example paste a style found on Snazzy Maps.
+                     styles: [{'featureType':'water','stylers':[{'visibility':'on'},{'color':'#428BCA'}]},{'featureType':'landscape','stylers':[{'color':'#f2e5d4'}]},{'featureType':'road.highway','elementType':'geometry','stylers':[{'color':'#c5c6c6'}]},{'featureType':'road.arterial','elementType':'geometry','stylers':[{'color':'#e4d7c6'}]},{'featureType':'road.local','elementType':'geometry','stylers':[{'color':'#fbfaf7'}]},{'featureType':'poi.park','elementType':'geometry','stylers':[{'color':'#c5dac6'}]},{'featureType':'administrative','stylers':[{'visibility':'on'},{'lightness':33}]},{'featureType':'road'},{'featureType':'poi.park','elementType':'labels','stylers':[{'visibility':'on'},{'lightness':20}]},{},{'featureType':'road','stylers':[{'lightness':20}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map
+                // We are using a div with id="map" seen up in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+	      // Put a marker at the center of the map
+	      var marker = new google.maps.Marker({
+      		position: myLatlng,
+      		map: map,
+      		title: 'We are right here!'
+  		});
+            }
+        </script>
+<% end %>
