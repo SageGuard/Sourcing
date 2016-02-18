@@ -26,7 +26,7 @@
                <div class="row isotope_portfolio_container">
 
                  <% @projects.each do |p| %>
-                    <div class="<%= p.html_category %> col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="cat_<%= p.category %> col-xs-12 col-sm-6 col-md-4 col-lg-4">
                          <div class="portfolio_item"> <a href="portfolio_item.html" data-path-hover="M 180,190 0,158 0,0 180,0 z">
                               <figure style="background-image:url(images/portfolio/t5.jpg)">
                                    <svg viewBox="0 0 180 320" preserveAspectRatio="none">
