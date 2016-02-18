@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+    puts "Creating Projects..."
     Project.create([
         {
           title: "Sweat X",
@@ -39,9 +39,15 @@
         },
     ])
 
+    puts "Creating Categories..."
     Category.create([
         {name: "Automotive"},
         {name: "Energy"},
         {name: "Medical"},
         {name: "Industrial"}
     ])
+
+    puts "Creating Admin..."
+    Admin.create! email: 'test@test.com',
+                  password: 'password',
+                  password_confirmation: 'password'
