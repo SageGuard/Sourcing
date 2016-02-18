@@ -1,7 +1,8 @@
 RailsAdmin.config do |config|
-  config.model 'Admin' do
+  config.model 'User' do
     list do
       field :email
+      field :admin
     end
   end
 
@@ -10,13 +11,21 @@ RailsAdmin.config do |config|
       field :name
     end
   end
+
+
+  config.authorize_with do
+    unless current_user.admin?
+      redirect_to main_app.root_path
+    end
+  end
+  
   ### Popular gems integration
 
   ## == Devise ==
   config.authenticate_with do
-    warden.authenticate! scope: :admin
+    warden.authenticate! scope: :user
   end
-  config.current_user_method(&:current_admin)
+  config.current_user_method(&:current_user)
 
   ## == Cancan ==
   # config.authorize_with :cancan
