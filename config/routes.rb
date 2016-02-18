@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:new, :create]
   resources :projects
-  resources :posts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
