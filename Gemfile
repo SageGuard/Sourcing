@@ -15,6 +15,8 @@ gem 'therubyracer'
 gem 'simple_form'
 gem 'devise'
 gem 'rails_admin'
+gem "paperclip", "~> 4.3"
+gem 'puma'
 
 group :development, :test do
   gem 'sqlite3'
