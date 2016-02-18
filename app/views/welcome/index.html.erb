@@ -66,7 +66,7 @@
                <div class="portfolio_strict row">
                  <% for project in @projects do %>
                     <div class="col-sm-4 col-md-4">
-                         <div class="portfolio_item wow animated flipInX"> <a href="portfolio_item.html" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                         <div class="portfolio_item wow animated flipInX"> <a href="<%= project_path(project.id) %>" data-path-hover="M 180,190 0,158 0,0 180,0 z">
                               <figure style="background-image:url(images/portfolio/p4.jpg)">
                                    <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                         <path d="M 180,0 0,0 0,0 180,0 z"/>
@@ -78,7 +78,7 @@
                               </figure>
                               </a>
                               <div class="portfolio_description">
-                                   <h3><a href="portfolio_item.html"><%= project.title %></a></h3>
+                                   <h3><%= link_to project.title, project_path(project.id) %></h3>
                                    <p><%= project.category %></p>
                               </div>
                          </div>
