@@ -15,8 +15,9 @@
   <link rel="apple-touch-icon-precomposed" href="apple-touch-fa-57x57-precomposed.png">
   <link rel="shortcut icon" href="favicon.png">
 </head>
-<body <%= @body_class %>>
+<body<%= @body_class %>>
   <%= render "layouts/header" %>
+    <%= render "layouts/flash" %>
   <%= yield %>
   <%= render "layouts/footer" %>
   <%= content_for "google_map" %>

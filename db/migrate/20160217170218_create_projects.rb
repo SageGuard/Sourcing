@@ -5,7 +5,6 @@ class CreateProjects < ActiveRecord::Migration
       t.string :subtitle
       t.text :description
       t.string :category
-      t.string :html_category
       t.date :date
       t.string :client
 

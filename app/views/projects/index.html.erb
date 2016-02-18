@@ -14,11 +14,9 @@
           <div class="container">
                <ul class="portfolio_filters">
                     <li><a href="#" data-filter="*">show all</a></li>
-                    <li><a href="#" data-filter=".cat_artists">artists</a></li>
-                    <li><a href="#" data-filter=".cat_people">people</a></li>
-                    <li><a href="#" data-filter=".cat_travel">travel</a></li>
-                    <li><a href="#" data-filter=".cat_poetic">poetic</a></li>
-                    <li><a href="#" data-filter=".cat_automotive">automotive</a></li>
+                    <% for category in @categories %>
+                      <li><a href="#" data-filter=".cat_<%= category.name %>"><%= category.name %></a></li>
+                    <% end %>
                </ul>
           </div>
      </section>

@@ -30,32 +30,32 @@
                          </div>
                     </div>
                     <div class="contact_form col-sm-8 col-md-8">
-                         <form name="contact_form" id="contact_form" method="post">
-                              <div class="row">
-                                   <div class="col-sm-6 col-md-6">
-                                        <label>Name</label>
-                                        <input name="name" id="name" class="form-control" type="text" value="">
-                                   </div>
-                                   <div class="col-sm-6 col-md-6">
-                                        <label>E-mail</label>
-                                        <input name="email" id="email" class="form-control" type="text" value="">
-                                   </div>
-                              </div>
-                              <div class="row">
-                                   <div class="col-sm-12 col-md-12">
-                                        <label>Subject</label>
-                                        <input name="subject" id="subject" class="form-control" type="text">
-                                   </div>
-                              </div>
-                              <div class="row">
-                                   <div class="col-sm-12 col-md-12">
-                                        <label>Message</label>
-                                        <textarea name="message" id="message" rows="8" class="form-control"></textarea>
-                                   </div>
-                                   <div class="col-sm-12 col-md-12"><br/>
-                                        <a id="submit_btn" class="btn btn-primary" name="submit">Submit Message</a> <span id="notice" class="alert alert-warning alert-dismissable hidden" style="margin-left:20px;"></span> </div>
-                              </div>
-                         </form>
+                      <%= simple_form_for @message do |f| %>
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6">
+                            <%= f.input :name %>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <%= f.input :email %>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-12 col-md-12">
+                            <%= f.input :subject %>
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-sm-12 col-md-12">
+                            <%= f.input :message, input_html: { rows: "8" } %>
+                          </div>
+                          <div class="col-sm-12 col-md-12"><br/>
+                            <%= f.button :submit, input_html: { class: 'btn btn-primary' } %><span id="notice" class="alert alert-warning alert-dismissable hidden" style="margin-left:20px;"></span>
+                          </div>
+                        </div>
+                      <% end %>
                     </div>
                </div>
            </div>

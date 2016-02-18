@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+
+  devise_for :admins
   root 'welcome#index'
 
+  mount RailsAdmin::Engine => '/dashboard', as: 'rails_admin'
 
   get '/about' => 'welcome#about'
-  get '/contact' => 'welcome#contact'
   get '/careers' => 'welcome#careers'
 
+
+  resources :messages, only: [:new, :create]
   resources :projects
   resources :posts
 

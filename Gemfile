@@ -14,7 +14,7 @@ gem "font-awesome-rails"
 gem 'therubyracer'
 gem 'simple_form'
 gem 'devise'
-
+gem 'rails_admin'
 
 group :development, :test do
   gem 'sqlite3'
