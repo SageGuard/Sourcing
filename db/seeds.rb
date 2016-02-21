@@ -80,4 +80,8 @@
     User.create! email: 'test@test.com',
                   password: 'password',
                   password_confirmation: 'password',
-                  admin: true
+                  dashboard_admin: true
+
+
+Spree::Core::Engine.load_seed if defined?(Spree::Core)
+Spree::Auth::Engine.load_seed if defined?(Spree::Auth)

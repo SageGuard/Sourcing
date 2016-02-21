@@ -6,4 +6,13 @@ class Project < ActiveRecord::Base
   validates :description, presence: true
   validates :category, presence: true
   validates :photos, presence: true
+
+  rails_admin do
+    list do
+      field :title
+      field :subtitle
+      field :category
+      field :description
+    end
+  end
 end

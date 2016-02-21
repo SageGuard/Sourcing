@@ -1,16 +1,5 @@
 RailsAdmin.config do |config|
-  config.model 'User' do
-    list do
-      field :email
-      field :admin
-    end
-  end
-
-  config.model 'Category' do
-    list do
-      field :name
-    end
-  end
+  config.main_app_name = ["SageGuard Sourcing", "Dashboard"]
 
 
   config.authorize_with do
@@ -18,7 +7,7 @@ RailsAdmin.config do |config|
       redirect_to main_app.root_path
     end
   end
-  
+
   ### Popular gems integration
 
   ## == Devise ==
@@ -27,8 +16,6 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
-  ## == Cancan ==
-  # config.authorize_with :cancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -39,11 +26,15 @@ RailsAdmin.config do |config|
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   config.actions do
-    dashboard                     # mandatory
-    index                         # mandatory
+    dashboard do
+      only [Category, Message, Photo, Project, TeamMember, User]
+    end
+    index do
+      only [Category, Message, Photo, Project, TeamMember, User]
+    end
     new
-    # export
-    # bulk_delete
+    export
+    bulk_delete
     show
     edit
     delete

@@ -15,7 +15,7 @@ gem 'therubyracer'
 gem 'simple_form'
 gem 'devise'
 gem 'rails_admin'
-gem "paperclip", "~> 4.3"
+gem "paperclip"
 gem 'puma'
 
 group :development, :test do
@@ -32,3 +32,6 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'spree', '~> 3.0.6.1'
+gem 'spree_gateway', '~> 3.0.0'

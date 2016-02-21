@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   mount RailsAdmin::Engine => '/dashboard', as: 'rails_admin'
-
+  mount Spree::Core::Engine, :at => '/shop'
 end
