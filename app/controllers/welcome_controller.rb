@@ -9,5 +9,6 @@ class WelcomeController < ApplicationController
 
   def about
     @title = "About"
+    @members = TeamMember.all
   end
 end

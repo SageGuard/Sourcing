@@ -44,6 +44,38 @@
         {name: "Industrial"}
     ])
 
+    puts "Creating Team Members"
+    TeamMember.create([
+        {
+          name: "Guy Sherker",
+          title: "President",
+          photo: File.open("#{Rails.root}/public/images/blank-image.png"),
+          facebook: "https://facebook.com",
+          linkedin: "https://linkedin.com"
+        },
+        {
+          name: "Kikki Powers",
+          title: "Director of Ops",
+          photo: File.open("#{Rails.root}/public/images/blank-image.png"),
+          facebook: "https://facebook.com",
+          linkedin: "https://linkedin.com"
+        },
+        {
+          name: "Hymie Yomson",
+          title: "Sourcing Agent",
+          photo: File.open("#{Rails.root}/public/images/blank-image.png"),
+          facebook: "https://facebook.com",
+          linkedin: "https://linkedin.com"
+        },
+        {
+          name: "Peg Gamer",
+          title: "Sales Manager",
+          photo: File.open("#{Rails.root}/public/images/blank-image.png"),
+          facebook: "https://facebook.com",
+          linkedin: "https://linkedin.com"
+        }
+    ])
+
     puts "Creating Admin..."
     User.create! email: 'test@test.com',
                   password: 'password',
