@@ -2,8 +2,6 @@
      <section class="hgroup">
           <div class="container">
                <h1>Portfolio</h1>
-               <h2>This could be a showcase of your work! We are using the Isotope Jquery plugin to filter results.
-                    This is the<strong> strict version</strong>, you should also check out the<a href="gallery.html"><strong> great Masonry version</strong></a>. All photos © by <a href="http://www.dimitragiannouka.com" target="_blank">Dimitra Giannouka</a>.</h2>
                <ul class="breadcrumb pull-right">
                     <li><a href="index.html">Home</a> </li>
                     <li class="active">Portfolio</li>
@@ -14,21 +12,22 @@
           <div class="container">
                <ul class="portfolio_filters">
                     <li><a href="#" data-filter="*">show all</a></li>
+                    <% if @categories %>
                     <% for category in @categories %>
                       <li><a href="#" data-filter=".cat_<%= category.name %>"><%= category.name %></a></li>
+                    <% end %>
                     <% end %>
                </ul>
           </div>
      </section>
-
      <section class="portfolio_strict">
           <div class="container">
                <div class="row isotope_portfolio_container">
-
+                 <% if @projects %>
                  <% @projects.each do |p| %>
                     <div class="cat_<%= p.category %> col-xs-12 col-sm-6 col-md-4 col-lg-4">
                          <div class="portfolio_item"> <a href="<%= project_path(p.id) %>" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                              <figure style="background-image:url(images/portfolio/t5.jpg)">
+                              <figure style="background-image:url(<%= p.photos.first.photo.url %>)">
                                    <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                         <path d="M 180,0 0,0 0,0 180,0 z"/>
                                    </svg>
@@ -47,7 +46,7 @@
                          </div>
                     </div>
                   <% end %>
-
+                  <% end %>
                </div>
           </div>
      </section>
