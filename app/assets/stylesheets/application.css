@@ -16,6 +16,6 @@
  *= require style
  *= require isotope/style
  *= require font-awesome
- *= require about
+ *= require_tree .
  *= require_self
  */

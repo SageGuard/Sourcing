@@ -4,22 +4,25 @@
                <div class="row">
                     <div class="footer_teaser col-sm-4 col-md-4">
                          <h3>About us</h3>
-                         <p><i class="fa fa-map-marker"></i> 29638 Detroit Rd.</p>
-                         <p><i class="fa fa-phone"></i> (440) 892-2000</p>
-                         <p><i class="fa fa-print"></i> (+30) 9854-7855</p>
-                         <p><i class="fa fa-envelope"></i> contact@sageguard.com</p>
+                         <a href="https://www.google.com/maps/place/29638+Detroit+Rd,+Westlake,+OH+44145/@41.4645189,-81.9507033,17z/data=!3m1!4b1!4m2!3m1!1s0x8830921c0f593b59:0xa73ab2d06ede8848"><p><i class="fa fa-map-marker"></i> 29638 Detroit Rd.</p></a>
+                         <a href="tel:4408922000"><p><i class="fa fa-phone"></i> (440) 892-2000</p></a>
+                         <a href="fax:33098547855"><p><i class="fa fa-print"></i> (+30) 9854-7855</p></a>
+                         <a href="mailto:contact@sageguard.com"><p><i class="fa fa-envelope"></i> contact@sageguard.com</p></a>
                     </div>
                     <div class="footer_teaser col-sm-4 col-md-4">
                          <h3>Content</h3>
-                         <ul class="nav">
-                           <li>Home</li>
-                           <li>About</li>
-                           <li>Contact</li>
-                           <li>Careers</li>
-                           <li>Services</li>
-                           <li>Portfolio</li>
-                           <li>Shop</li>
-                           <li>Blog</li>
+                         <ul class="footer-nav pull-left">
+                           <li><%= link_to "Home", root_path %></li>
+                           <li><%= link_to "About", about_path %></li>
+                           <li><%= link_to "Contact", new_message_path %></li>
+                           <li><%= link_to "Portfolio", projects_path %></li>
+                           <li><%= link_to "Shop", root_path %></li>
+                         </ul>
+                    </div>
+                    <div class="footer_teaser col-sm-4 col-md-4">
+                         <h3>Support</h3>
+                         <ul class="footer-nav pull-left">
+                           <li>disclaimers, etc</li>
                          </ul>
                     </div>
                </div>
