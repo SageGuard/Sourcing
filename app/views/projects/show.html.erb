@@ -16,19 +16,19 @@
                          <section class="portfolio_slider_wrapper">
                               <div class="flexslider" id="portfolio_slider">
                                    <ul class="slides">
-                                     <!--  @project.images.each do |i|  -->
-                                        <li class="item" data-thumb="images/portfolio/item/4.jpg" style="background-image: url(images/portfolio/item/4.jpg)">
-                                             <div class="container"> <a href="images/portfolio/item/4.jpg" rel="prettyPhoto[gal]"></a>
+                                      <% @project.photos.each do |photo| %>
+                                        <li class="item" data-thumb="<%= photo.photo.url %>" style="background-image: url(<%= photo.photo.url %>)">
+                                             <div class="container"> <a href="<%= photo.photo.url %>" rel="prettyPhoto[gal]"></a>
                                              </div>
                                         </li>
-                                     <!--  end  -->
+                                      <% end %>
                                    </ul>
                               </div>
                               <div id="carousel" class="flexslider">
                                    <ul class="slides">
-                                     <!--  @project.images.each do |i|  -->
-                                        <li> <img src="images/portfolio/item/4.jpg" alt=""> </li>
-                                     <!--  end  -->
+                                     <% @project.photos.each do |photo| %>
+                                        <li> <img src="<%= photo.photo.url %>" alt=""> </li>
+                                     <% end %>
                                    </ul>
                               </div>
                          </section>
