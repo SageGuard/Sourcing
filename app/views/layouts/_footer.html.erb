@@ -11,18 +11,20 @@
                     </div>
                     <div class="footer_teaser col-sm-4 col-md-4">
                          <h3>Content</h3>
-                         <ul class="footer-nav pull-left">
+                         <ul class="footer-nav">
                            <li><%= link_to "Home", root_path %></li>
                            <li><%= link_to "About", about_path %></li>
-                           <li><%= link_to "Contact", new_message_path %></li>
                            <li><%= link_to "Portfolio", projects_path %></li>
                            <li><%= link_to "Shop", root_path %></li>
                          </ul>
                     </div>
                     <div class="footer_teaser col-sm-4 col-md-4">
                          <h3>Support</h3>
-                         <ul class="footer-nav pull-left">
-                           <li>disclaimers, etc</li>
+                         <ul class="footer-nav">
+                           <li><%= link_to "Terms of Service", disclaimers_terms_path %></li>
+                           <li><%= link_to "Refund Policy", disclaimers_refund_path %></li>
+                           <li><%= link_to "Privacy Policy", disclaimers_privacy_path %></li>
+                           <li><%= link_to "Contact", new_message_path %></li>
                          </ul>
                     </div>
                </div>
