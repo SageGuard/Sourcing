@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221183330) do
+ActiveRecord::Schema.define(version: 20160222230125) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -63,8 +63,14 @@ ActiveRecord::Schema.define(version: 20160221183330) do
     t.string   "category"
     t.date     "date"
     t.string   "client"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "purchasable"
+    t.boolean  "quotable",          default: true
+    t.string   "spec_file_name"
+    t.string   "spec_content_type"
+    t.integer  "spec_file_size"
+    t.datetime "spec_updated_at"
   end
 
   create_table "spree_addresses", force: :cascade do |t|
