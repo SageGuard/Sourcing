@@ -7,5 +7,6 @@
 
  *= require_self
  *= require font-awesome
+ *= require footer
  *= require_tree .
 */
