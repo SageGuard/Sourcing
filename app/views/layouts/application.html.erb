@@ -17,13 +17,7 @@
 </head>
 <body<%= @body_class %>>
   <%= render "layouts/header" %>
-  <% if flash[:notice] || flash[:error] %>
-    <% if flash[:notice] %>
-      <div class="notice alert alert-success"><%= notice %></div>
-    <% else %>
-      <div class="alert alert-danger"><%= error %></div>
-    <% end %>
-  <% end %>
+  <%= render "layouts/flash"%>
   <%= yield %>
   <%= render "layouts/footer" %>
   <%= content_for "google_map" %>
