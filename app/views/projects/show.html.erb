@@ -37,11 +37,16 @@
                          <article class="portfolio_details">
                               <h2 class="section_header">About the project</h2>
                               <p><%= @project.description %></p>
+                              <% if @project.spec.file? %>
                               <br>
+                              <p><strong>Get the Spec: </strong><%= link_to "Project Spec", @project.spec.url %></p>
+                              <% end %>
                               <br>
                               <div>
-                                 <p><strong>Date:</strong> November 2013</p>
-                                 <% if @project.client %>
+                                 <% if @project.date %>
+                                 <p><strong>Date:</strong><%= @project.date %></p>
+                                 <% end %>
+                                 <% if @project.client != "" %>
                                  <p><strong>Client: </strong><%= @project.client %></p>
                                  <% end %>
                                  <p><strong>Category: </strong><%= @project.category %></p>
