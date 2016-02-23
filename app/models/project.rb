@@ -18,4 +18,15 @@ class Project < ActiveRecord::Base
       field :description
     end
   end
+
+  def self.all_project_names
+    names = []
+    projects = Project.all
+
+    projects.each do |p|
+      names.push p.title
+    end
+
+    return names
+  end
 end

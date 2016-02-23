@@ -48,7 +48,15 @@
                               </div>
                               <br>
                               <br>
-                              <a href="#" class="btn btn-danger center-block btn-lg">Visit Project Site</a> </article>
+                              <% if @project.quotable %>
+                              <%= link_to "Request a Quote", new_quote_path, class: "btn btn-primary center-block btn-lg" %>
+                              <br>
+                              <% end %>
+                              <% if @project.purchasable %>
+                              <%= link_to "Purchase in our Store", "/shop", class: "btn btn-primary center-block btn-lg" %>
+                              <% end %>
+                              <br>
+                          </article>
                     </div>
                </div>
           </div>

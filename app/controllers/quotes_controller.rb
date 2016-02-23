@@ -2,6 +2,9 @@ class QuotesController < ApplicationController
   def new
     @title = "Request a Quote"
     @quote = Quote.new
+
+    @project_names = Project.all_project_names
+    @project_names << "Sourcing services" << "Water filtration" << "Other"
   end
 
   def create
