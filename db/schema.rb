@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222230125) do
+ActiveRecord::Schema.define(version: 20160222231830) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -71,6 +71,29 @@ ActiveRecord::Schema.define(version: 20160222230125) do
     t.string   "spec_content_type"
     t.integer  "spec_file_size"
     t.datetime "spec_updated_at"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "telephone"
+    t.string   "website"
+    t.string   "company"
+    t.string   "address"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "zipcode"
+    t.string   "industry"
+    t.string   "product"
+    t.string   "project_timing"
+    t.string   "budget"
+    t.string   "project_spec_file_name"
+    t.string   "project_spec_content_type"
+    t.integer  "project_spec_file_size"
+    t.datetime "project_spec_updated_at"
+    t.text     "project_description"
   end
 
   create_table "spree_addresses", force: :cascade do |t|

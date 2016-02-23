@@ -27,10 +27,10 @@ RailsAdmin.config do |config|
 
   config.actions do
     dashboard do
-      only [Category, Message, Photo, Project, TeamMember, User]
+      only [Category, Message, Photo, Project, TeamMember, User, Quote]
     end
     index do
-      only [Category, Message, Photo, Project, TeamMember, User]
+      only [Category, Message, Photo, Project, TeamMember, User, Quote]
     end
     new
     export

@@ -1,0 +1,66 @@
+<div class="container">
+  <h1 class="text-center">Submit a Quote</h1>
+  <br>
+  <%= simple_form_for @quote do |f| %>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :name %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :telephone %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :company, label: "Company Name" %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :email %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :website %>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :address, label: "Company Address" %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :address2, label: "Address 2" %>
+    </div>
+    <div class="col-sm-12 col-md-4">
+    <%= f.input :city %>
+    </div>
+    <div class="col-sm-12 col-md-4">
+    <%= f.input :state %>
+    </div>
+    <div class="col-sm-12 col-md-4">
+    <%= f.input :zipcode %>
+    </div>
+    <div class="col-sm-12 col-md-4">
+    <%= f.input :country, as: :string %>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :industry %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :product, label: "Product/Service you are interested in" %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :project_timing, as: :select %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :budget, as: :select %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    <%= f.input :spec, as: :file, label: "Upload a spec file of your project" %>
+    </div>
+  </div>
+  <br>
+  <div class="row text-center">
+    <%= f.button :submit, class: 'btn-lg btn-primary' %>
+  </div>
+  <% end %>
+</div>
