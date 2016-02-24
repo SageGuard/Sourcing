@@ -1,17 +1,110 @@
 <div class="container">
   <h1 class='text-center'>Admin Documentation</h1>
   <br>
-  <h4 class='text-center'>Here you will find everything you need to administer your website</h4>
+  <h4 class='text-center'>Here you will find everything you need to manage your website</h4>
   <hr>
-
   <div class="row">
-    <div class="col-sm-12">
-      <h2>Basics</h2>
-      <h4>(1.1) Logging in</h4>
-      <p>There are two administration areas, one for the portfolio site, and one for the ecommerce site. Both are accessible using the same login. From either link you will be redirected to a login page if you aren't logged in</p>
-      <p><strong>Portfolio Dashboard: </strong>http://sageguardsourcing.com/dashboard</p>
-      <p><strong>Shop Dashboard: </strong>http://sageguardsourcing.com/shop/admin</p>
-      <p>Once you are logged in, you can reach the admin panel at the top of your site.  It contains links to the portfolio dashboard, the shop dashboard, the documenatation, and the logout button.</p>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                (1) Basics
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <h4>(1.1) Logging in</h4>
+              <p>There are two administration areas, one for the portfolio site, and one for the ecommerce site. Both are accessible using the same login. From either link you will be redirected to a login page if you aren't logged in</p>
+              <p><strong>Portfolio Dashboard: </strong>http://sageguardsourcing.com/dashboard</p>
+              <p><strong>Shop Dashboard: </strong>http://sageguardsourcing.com/shop/admin</p>
+              <p>Once you are logged in, you can reach the admin panel at the top of your site.  It contains links to the portfolio dashboard, the shop dashboard, the documenatation, and the logout button.</p>
+              <img src="images/documentation/admin-panel.png", alt: "admin panel">
+              <h4>(1.2) Portfolio site Administration</h4>
+              <p>The dashboard link takes you to the admin area of the portfolio site. The portfolio dashboard serves three purposes: manage the portfolio page and about us page, manage submitted quotes and questions from customers, and manage admin users. Records can be added, edited, deleted, and exported.</p>
+              <h4>(1.3) Ecommerce site Administration</h4>
+              <p>The dashboard to administer the ecommerce shop is much more complex and requires a seperate set of documentation. It allows you to manage many things: orders, customers, products, payment methods, shipping rates, tax rates, etc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                (2) Managing the portfolio site
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              <h4>(2.1) Categories</h4>
+              <p>The category page is by far the simplest. They are the categories of the portfolio page that the user can click to filter between project categories. Whenever a new category is created, it will show as a tab on the portfolio page.</p>
+              <h4>(2.2) Photos</h4>
+              <p>The photos section is for managing images associated with projects. When creating a new image, there are three required fields: photo name, the image upload itself, and the portfolio project associated with it. Photos must be in either jpeg, gif, or png format. As you will learn about portfolio items, you will be able to edit entire galleries of images for each project.</p>
+              <h4>(2.3) Projects</h4>
+              <p>Creating a project is not complex, but there are some fields some pay attention to. The title, subtitle, category, and description are all required, as well as at least one image. You can add a new image in the photos section, or when creating/editing a project.</p>
+              <p><strong>Note: the first image you select to associate with a project will be it's thumbnail image.</strong></p>
+              <p>Three other fields to pay attention to are 'quotable', 'purchasable', and 'spec'.  The first two should be checked if the portfolio project can be quoted for a price, or can be purchased in the shop. By default, quotable is checked when a project is being created.</p>
+              <p>You can also upload a spec of the project. The document must be in one of the following formats: pdf, doc, docx, xls, xlsx, or txt.</p>
+              <h4>(2.4) Quotes and messages</h4>
+              <p>Quotes and messages are pretty straight forward. When one of these is submitted, it will show up as a new record in their respective category. You have the ability to export these items to an excel spreadsheet. There is a button as well as a tab to select for exporting. You want to select 'Export to csv'.</p>
+              <h4>(2.5) Team Members</h4>
+              <p>Team members will appear on the about page. The Facebook and Linkedin fields are optional.</p>
+              <p><strong>Note: The optimal resolution for the photo upload is 810x810</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                (3) Managing Users
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+              <h4>(3.1) User administration fields</h4>
+              <p>The user section is where you can create new administrators. There are many input fields when creating or editing a user, but some should not be edited unless there is a specific reason you need to. Here is a list of the most common fields you may need to edit:</p>
+              <ul>
+                <li>Email</li>
+                <li>Password</li>
+                <li>Dashboard Admin</li>
+                <li>Spree Roles</li>
+              </ul>
+              <p>The authentication system in place serves both the portfolio site and the ecommerce site, that is why there are fields such are, ship address, orders, etc. You should not need to deal with these fields, this portion of the dashboard should be used if you need to create multiple admins.</p>
+              <p>The main two fields for administration are 'Dashboard Admin' and 'Spree Roles'. When dashboard admin is checked, that user will have full access to edit the portfolio site, but not the ecommerce site. To make a user and admin for the ecommerce site, their spree role must be set with the 'admin' role.</p>
+              <p>The reason the ecommerce role is titled 'Spree Role' is because the ecommerce platform integrated with the site is a platform titled 'Spree Commerce'.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingFour">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                (4) Ecommerce Documentation
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+            <div class="panel-body">
+              <h4>(4.1) The Ecommerce Platform</h4>
+              <p>The shopping platform integrated with the portfolio site is called Spree Commerce. The code is available online, therefore the ecommerce platform is literally integrated into your website, code and all.</p>
+              <h4>(4.2) Documentation</h4>
+              <p>There is already a wealth of documentation existing for Spree Commerce. Below is a link to the admin documentation that you can refer to when managing your shop.</p>
+              <%= link_to "Ecommerce Documentation", 'https://guides.spreecommerce.com/user/', class: "btn btn-primary btn-lg"%>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
