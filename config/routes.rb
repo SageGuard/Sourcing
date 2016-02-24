@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-
+  mount Spree::Core::Engine, :at => '/shop'
+  mount RailsAdmin::Engine => '/dashboard', as: 'rails_admin'
+  devise_for :users
   root 'welcome#index'
+  get 'docs' => 'docs#index'
   get '/about' => 'welcome#about'
   get 'disclaimers/terms'
   get 'disclaimers/refund'
@@ -9,9 +12,4 @@ Rails.application.routes.draw do
   resources :messages, only: [:new, :create]
   resources :quotes, only: [:new, :create]
   resources :projects
-
-  devise_for :users
-
-  mount RailsAdmin::Engine => '/dashboard', as: 'rails_admin'
-  mount Spree::Core::Engine, :at => '/shop'
 end
