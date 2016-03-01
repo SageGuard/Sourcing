@@ -16,7 +16,6 @@
 //= require jquery.flexslider-min
 //= require jquery.prettyPhoto
 //= require jquery.isotope.min
-//= require jquery.ui.totop
 //= require easing
 //= require wow.min
 //= require snap.svg-min
