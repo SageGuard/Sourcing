@@ -1,0 +1,32 @@
+
+.footer-nav {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.inline-footer-nav > li {
+  display: inline;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.shop-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #333333;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
