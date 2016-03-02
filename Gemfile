@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.5.1'
-gem 'pg'
+
 gem 'less-rails'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -18,9 +18,11 @@ gem 'devise'
 gem 'rails_admin'
 gem "paperclip"
 gem 'puma'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -31,7 +33,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-
+  gem 'pg'
 end
 
 gem 'spree', '~> 3.0.6.1'
