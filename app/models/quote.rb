@@ -31,7 +31,7 @@ class Quote < ActiveRecord::Base
       field :product
       field :project_timing
       field :budget
-      field :spec
+      field :project_spec
     end
   end
 end
