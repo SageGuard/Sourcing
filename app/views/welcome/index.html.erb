@@ -60,6 +60,7 @@
                <h2 class="section_header fancy centered">Recent Projects from our Portfolio<small>we take pride in our work</small></h2>
                <div class="portfolio_strict row">
                  <% for project in @projects do %>
+                 <% unless project.photos.empty? %>
                     <div class="col-sm-4 col-md-4">
                          <div class="portfolio_item wow animated flipInX"> <a href="<%= project_path(project.id) %>" data-path-hover="M 180,190 0,158 0,0 180,0 z">
                               <figure style="background-image:url(<%= project.photos.first.photo.url %>)">
@@ -78,6 +79,7 @@
                               </div>
                          </div>
                     </div>
+                 <% end %>
                  <% end %>
                </div>
           </div>

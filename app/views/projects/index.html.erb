@@ -25,6 +25,7 @@
                <div class="row isotope_portfolio_container">
                  <% if @projects %>
                  <% @projects.each do |p| %>
+                 <% unless p.photos.empty? %>
                     <div class="cat_<%= p.category %> col-xs-12 col-sm-6 col-md-4 col-lg-4">
                          <div class="portfolio_item"> <a href="<%= project_path(p.id) %>" data-path-hover="M 180,190 0,158 0,0 180,0 z">
                               <figure style="background-image:url(<%= p.photos.first.photo.url %>)">
@@ -45,6 +46,7 @@
                               </div>
                          </div>
                     </div>
+                  <% end %>
                   <% end %>
                   <% end %>
                </div>
