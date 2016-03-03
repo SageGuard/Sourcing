@@ -7,7 +7,6 @@ class Project < ActiveRecord::Base
   validates :subtitle, presence: true
   validates :description, presence: true
   validates :category, presence: true
-  validates :photos, presence: true
   validates_attachment :spec, content_type: { content_type: ["application/msword", "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"] }
 
   rails_admin do
