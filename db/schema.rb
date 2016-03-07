@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222231830) do
+ActiveRecord::Schema.define(version: 20160307215031) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -1065,7 +1065,10 @@ ActiveRecord::Schema.define(version: 20160222231830) do
     t.datetime "photo_updated_at"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "position"
   end
+
+  add_index "team_members", ["position"], name: "index_team_members_on_position"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                             default: "",    null: false

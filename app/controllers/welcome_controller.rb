@@ -9,6 +9,6 @@ class WelcomeController < ApplicationController
 
   def about
     @title = "About"
-    @members = TeamMember.all
+    @members = TeamMember.all.order("position ASC")
   end
 end
