@@ -20,6 +20,7 @@ gem "paperclip"
 gem 'puma'
 gem 'aws-sdk', '~> 1.3'
 
+
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
